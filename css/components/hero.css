@@ -67,20 +67,20 @@
 }
 
 .hero__subtitle {
-  font-size: var(--text-sm);
-  font-weight: var(--font-medium);
-  color: rgba(255, 255, 255, 0.7);
-  letter-spacing: var(--tracking-wide);
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: var(--tracking-normal);
   margin-bottom: var(--space-4);
 }
 
 .hero__title {
-  font-size: var(--text-5xl);
-  font-weight: var(--font-extrabold);
+  font-size: var(--text-6xl);
+  font-weight: var(--font-medium);
   color: var(--color-white);
-  line-height: 1.1;
-  margin-bottom: var(--space-5);
-  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: var(--space-6);
+  letter-spacing: -0.02em;
 }
 
 .hero__description {

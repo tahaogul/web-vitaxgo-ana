@@ -41,22 +41,20 @@
 
 /* ── Primary Button ────────────────────────── */
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-trust-blue), var(--color-trust-blue-dark));
+  background-color: var(--color-primary-900);
   color: var(--color-white);
-  font-weight: var(--font-extrabold);
-  box-shadow: 0 4px 14px rgba(30, 90, 229, 0.35);
+  font-weight: var(--font-medium);
+  box-shadow: none;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--color-trust-blue-light), var(--color-trust-blue));
-  box-shadow: 0 6px 20px rgba(30, 90, 229, 0.45);
+  background-color: var(--color-primary-800);
   transform: translateY(-2px);
   color: var(--color-white);
 }
 
 .btn-primary:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(30, 90, 229, 0.3);
 }
 
 /* ── Secondary Button ──────────────────────── */
@@ -81,13 +79,14 @@
 .btn-outline-white {
   background-color: transparent;
   color: var(--color-white);
-  border-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  font-weight: var(--font-medium);
 }
 
 .btn-outline-white:hover {
-  background-color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.1);
   border-color: var(--color-white);
-  color: var(--color-primary-800);
+  color: var(--color-white);
   transform: translateY(-2px);
 }
 
