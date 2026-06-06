@@ -1,0 +1,195 @@
+/* ============================================
+   VITAXGO — Hero Section
+   ============================================ */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-primary-800);
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 22, 40, 0.92) 0%,
+    rgba(10, 22, 40, 0.75) 35%,
+    rgba(10, 22, 40, 0.45) 60%,
+    rgba(10, 22, 40, 0.2) 100%
+  );
+  z-index: 2;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: linear-gradient(to top, var(--color-white) 0%, transparent 100%);
+  z-index: 4;
+  pointer-events: none;
+}
+
+/* ── Hero Content ─────────────────────────── */
+.hero__inner {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--navbar-height) + var(--space-16));
+  padding-bottom: var(--space-20);
+  flex: 1;
+}
+
+.hero__content {
+  max-width: 580px;
+}
+
+.hero__subtitle {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: var(--space-4);
+}
+
+.hero__title {
+  font-size: var(--text-5xl);
+  font-weight: var(--font-extrabold);
+  color: var(--color-white);
+  line-height: 1.1;
+  margin-bottom: var(--space-5);
+  letter-spacing: -0.03em;
+}
+
+.hero__description {
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.65);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 480px;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* ── Bottom Bar ───────────────────────────── */
+.hero__bottom-bar {
+  position: relative;
+  z-index: 5;
+  background: rgba(10, 22, 40, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero__bottom-bar-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-10);
+  padding: var(--space-4) 0;
+}
+
+.hero__bottom-bar span {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: var(--tracking-wide);
+  position: relative;
+}
+
+.hero__bottom-bar span:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: calc(var(--space-10) / -2);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 1024px) {
+  .hero__bg::after {
+    background: linear-gradient(
+      0deg,
+      rgba(10, 22, 40, 0.95) 0%,
+      rgba(10, 22, 40, 0.8) 40%,
+      rgba(10, 22, 40, 0.5) 100%
+    );
+  }
+
+  .hero__inner {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero__content {
+    max-width: 600px;
+  }
+
+  .hero__description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .hero__inner {
+    padding-top: calc(var(--navbar-height) + var(--space-10));
+    padding-bottom: var(--space-12);
+  }
+
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__bottom-bar-inner {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .hero__bottom-bar span:not(:last-child)::after {
+    display: none;
+  }
+}

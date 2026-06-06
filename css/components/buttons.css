@@ -1,0 +1,206 @@
+/* ============================================
+   VITAXGO — Button Components
+   ============================================ */
+
+/* ── Base Button ───────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  line-height: 1;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-accent-500);
+  outline-offset: 3px;
+}
+
+/* Ripple effect */
+.btn .btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.35);
+  animation: ripple 0.6s ease-out forwards;
+  pointer-events: none;
+}
+
+/* ── Primary Button ────────────────────────── */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-trust-blue), var(--color-trust-blue-dark));
+  color: var(--color-white);
+  font-weight: var(--font-extrabold);
+  box-shadow: 0 4px 14px rgba(30, 90, 229, 0.35);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-trust-blue-light), var(--color-trust-blue));
+  box-shadow: 0 6px 20px rgba(30, 90, 229, 0.45);
+  transform: translateY(-2px);
+  color: var(--color-white);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(30, 90, 229, 0.3);
+}
+
+/* ── Secondary Button ──────────────────────── */
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-trust-blue);
+  border-color: var(--border-strong);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-trust-blue);
+  border-color: var(--color-trust-blue);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* ── Outline White Button ──────────────────── */
+.btn-outline-white {
+  background-color: transparent;
+  color: var(--color-white);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-outline-white:hover {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-primary-800);
+  transform: translateY(-2px);
+}
+
+.btn-outline-white:active {
+  transform: translateY(0);
+}
+
+/* ── Outline Dark Button ──────────────────── */
+.btn-outline-dark {
+  background-color: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-strong);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--color-trust-blue);
+  border-color: var(--color-trust-blue);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.btn-outline-dark:active {
+  transform: translateY(0);
+}
+
+/* ── Ghost Button ──────────────────────────── */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-accent-500);
+  border-color: transparent;
+  padding-left: var(--space-3);
+  padding-right: var(--space-3);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-600);
+}
+
+/* ── Dark Button ───────────────────────────── */
+.btn-dark {
+  background-color: var(--color-primary-800);
+  color: var(--color-white);
+  border-color: var(--color-primary-800);
+}
+
+.btn-dark:hover {
+  background-color: var(--color-primary-700);
+  border-color: var(--color-primary-700);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── Size Variants ─────────────────────────── */
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-md);
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+  border-radius: var(--radius-xl);
+}
+
+.btn-xl {
+  padding: var(--space-5) var(--space-10);
+  font-size: var(--text-lg);
+  border-radius: var(--radius-xl);
+}
+
+/* ── Icon in Button ────────────────────────── */
+.btn svg,
+.btn .btn-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn-lg svg,
+.btn-lg .btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Button with Arrow ─────────────────────── */
+.btn-arrow::after {
+  content: '→';
+  display: inline-block;
+  margin-left: var(--space-2);
+  transition: transform var(--duration-normal) var(--ease-out);
+}
+
+.btn-arrow:hover::after {
+  transform: translateX(4px);
+}
+
+/* ── Pill Button (Full Radius) ─────────────── */
+.btn-pill {
+  border-radius: var(--radius-full);
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 480px) {
+  .btn {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+  }
+
+  .btn-lg {
+    padding: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+  }
+}

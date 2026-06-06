@@ -1,0 +1,89 @@
+/* ============================================
+   VITAXGO — Tracking / Photo Section
+   ============================================ */
+
+.tracking {
+  background: var(--bg-body);
+  overflow: hidden;
+  transition: background-color var(--duration-normal) var(--ease-out);
+}
+
+.tracking__inner {
+  position: relative;
+}
+
+/* ── Header ────────────────────────────────── */
+.tracking__header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-10);
+}
+
+.tracking__title {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  line-height: 1.15;
+}
+
+.tracking__subtitle {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* ── Photo ─────────────────────────────────── */
+.tracking__photo {
+  position: relative;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.tracking__photo-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.tracking__photo-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-10) var(--space-8);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, transparent 100%);
+}
+
+.tracking__photo-text {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-white);
+  max-width: 500px;
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 768px) {
+  .tracking__title {
+    font-size: var(--text-3xl);
+  }
+
+  .tracking__photo-text {
+    font-size: var(--text-lg);
+  }
+
+  .tracking__photo-img {
+    max-height: 400px;
+  }
+
+  .tracking__photo-overlay {
+    padding: var(--space-6) var(--space-4);
+  }
+}

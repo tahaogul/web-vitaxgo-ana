@@ -1,0 +1,187 @@
+/* ============================================
+   VITAXGO — Layout & Shared Utilities (Revised)
+   ============================================ */
+
+/* ── Container ─────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+}
+
+/* Container for narrower text blocks */
+.container-sm {
+  width: 100%;
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+}
+
+/* ── Sections ──────────────────────────────── */
+.section {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+}
+
+.section--sm {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+.section--lg {
+  padding-top: var(--space-32);
+  padding-bottom: var(--space-32);
+}
+
+.section--bg-light {
+  background-color: var(--bg-surface);
+}
+
+.section--bg-dark {
+  background-color: var(--color-primary-900);
+  color: var(--color-white);
+}
+
+/* ── Shared Headers ────────────────────────── */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-16);
+}
+
+.section-header--left {
+  text-align: left;
+  margin-left: 0;
+}
+
+.section-header h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  color: var(--text-primary);
+  margin-bottom: var(--space-4);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+/* Theme overrides for headers on dark bg */
+.section--bg-dark .section-header h2 {
+  color: var(--color-white);
+}
+
+.section--bg-dark .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Eyebrow / Tags ────────────────────────── */
+.eyebrow {
+  display: inline-block;
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-accent-500);
+  margin-bottom: var(--space-4);
+}
+
+/* ── Grid Layouts ──────────────────────────── */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* Responsive Grids */
+@media (max-width: 1024px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .section {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-10);
+  }
+
+  .section-header h2 {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Visibility Utilities ──────────────────── */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* ── Mode Switching ────────────────────────── */
+[data-mode="bireysel"] {
+  display: none;
+}
+
+body[data-mode="bireysel"] [data-mode="kurumsal"] {
+  display: none;
+}
+
+body[data-mode="bireysel"] [data-mode="bireysel"] {
+  display: block;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
