@@ -74,8 +74,8 @@
   --border-strong:  var(--ink-300);
 
   /* ── Typography ─────────────────────────────── */
-  --font-sans:     'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-display:  'Montserrat', var(--font-sans);
+  --font-sans:     'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-display:  'Poppins', var(--font-sans);
 
   /* Font Sizes */
   --text-xs:   0.75rem;   /* 12px */

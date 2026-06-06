@@ -79,7 +79,7 @@
 .btn-outline-white {
   background-color: transparent;
   color: var(--color-white);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 2px solid rgba(255, 255, 255, 0.8);
   font-weight: var(--font-medium);
 }
 
@@ -98,7 +98,7 @@
 .btn-outline-dark {
   background-color: transparent;
   color: var(--text-primary);
-  border-color: var(--border-strong);
+  border-color: var(--text-primary);
 }
 
 .btn-outline-dark:hover {
