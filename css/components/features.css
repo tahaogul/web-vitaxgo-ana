@@ -73,6 +73,10 @@
   height: auto;
   display: block;
   border-radius: var(--radius-xl);
+  object-fit: contain;
+}
+
+picture .feature-card__image {
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
