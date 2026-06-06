@@ -33,13 +33,5 @@ function switchMode(mode) {
     }
   });
 
-  document.querySelectorAll('[data-mode="kurumsal"]').forEach(el => {
-    el.style.display = mode === 'kurumsal' ? '' : 'none';
-  });
-
-  document.querySelectorAll('[data-mode="bireysel"]').forEach(el => {
-    el.style.display = mode === 'bireysel' ? '' : 'none';
-  });
-
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

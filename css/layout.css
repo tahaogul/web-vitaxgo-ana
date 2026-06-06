@@ -161,16 +161,12 @@
 }
 
 /* ── Mode Switching ────────────────────────── */
-[data-mode="bireysel"] {
+body:not([data-mode="bireysel"]) [data-mode="bireysel"] {
   display: none;
 }
 
 body[data-mode="bireysel"] [data-mode="kurumsal"] {
   display: none;
-}
-
-body[data-mode="bireysel"] [data-mode="bireysel"] {
-  display: block;
 }
 
 /* Screen reader only */
