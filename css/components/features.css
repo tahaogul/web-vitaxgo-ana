@@ -128,10 +128,16 @@
   background: transparent;
 }
 
+.feature-card--dark .feature-card__content {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
 .feature-card--dark .feature-card__content .btn {
-  display: block;
   width: fit-content;
-  margin: 0 auto;
+  margin-top: auto;
+  align-self: center;
 }
 
 /* ── Composite Image (phone + band) ── */
@@ -193,7 +199,7 @@
   grid-column: 1 / -1;
   grid-row: 2;
   background: var(--color-primary-900);
-  padding: var(--space-5) var(--space-6);
+  padding: var(--space-6) var(--space-8);
   text-align: center;
 }
 
