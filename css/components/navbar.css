@@ -70,6 +70,21 @@
   display: block;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .navbar__logo-img--dark {
+    display: none;
+  }
+  :root:not([data-theme="light"]) .navbar__logo-img--light {
+    display: block;
+  }
+}
+[data-theme="dark"] .navbar__logo-img--dark {
+  display: none !important;
+}
+[data-theme="dark"] .navbar__logo-img--light {
+  display: block !important;
+}
+
 .navbar__logo-text {
   font-family: var(--font-display);
   font-size: var(--text-2xl);
