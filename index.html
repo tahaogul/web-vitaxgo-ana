@@ -62,8 +62,8 @@
         <a href="#" class="navbar__link navbar__link--active" data-mode-switch="kurumsal">Kurumsal</a>
         <a href="#" class="navbar__link" data-mode-switch="bireysel">Bireysel</a>
         <a href="#" class="navbar__link">Store</a>
-        <a href="#" class="navbar__link">Duyurular</a>
-        <a href="#" class="navbar__link">Hakkımızda</a>
+        <a href="#" class="navbar__link" data-modal="modal-duyurular">Duyurular</a>
+        <a href="#" class="navbar__link" data-modal="modal-hakkimizda">Hakkımızda</a>
       </nav>
 
       <!-- Right Icons -->
@@ -93,8 +93,8 @@
       <a href="#" class="navbar__mobile-link navbar__mobile-link--active" data-mode-switch="kurumsal">Kurumsal</a>
       <a href="#" class="navbar__mobile-link" data-mode-switch="bireysel">Bireysel</a>
       <a href="#" class="navbar__mobile-link">Store</a>
-      <a href="#" class="navbar__mobile-link">Duyurular</a>
-      <a href="#" class="navbar__mobile-link">Hakkımızda</a>
+      <a href="#" class="navbar__mobile-link" data-modal="modal-duyurular">Duyurular</a>
+      <a href="#" class="navbar__mobile-link" data-modal="modal-hakkimizda">Hakkımızda</a>
     </div>
 
     <!-- Overlay -->
@@ -497,6 +497,45 @@
     </section>
 
   </main>
+
+
+  <!-- ════════════════════════════════════════
+       MODALS
+       ════════════════════════════════════════ -->
+
+  <!-- Duyurular Modal -->
+  <div class="modal-overlay" id="modal-duyurular">
+    <div class="modal" role="dialog" aria-labelledby="modal-duyurular-title">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-duyurular-title">Duyurular</h2>
+        <button class="modal__close" aria-label="Kapat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <p>Henüz yayınlanmış bir duyuru bulunmamaktadır.</p>
+        <p>Yeni duyurular ve güncellemeler için bizi takip etmeye devam edin.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hakkımızda Modal -->
+  <div class="modal-overlay" id="modal-hakkimizda">
+    <div class="modal" role="dialog" aria-labelledby="modal-hakkimizda-title">
+      <div class="modal__header">
+        <h2 class="modal__title" id="modal-hakkimizda-title">Hakkımızda</h2>
+        <button class="modal__close" aria-label="Kapat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <p>VitaxGo, huzurevleri ve bakım merkezleri için akıllı sağlık takip çözümleri sunan bir sağlık teknolojisi şirketidir.</p>
+        <p>VitaxBand akıllı bileklik ve VitaxHuzur yazılım platformu ile sakinlerin sağlık verilerini 7/24 kesintisiz takip ederek, bakım kalitesini artırıyoruz.</p>
+        <p>Teknopark İstanbul, Pendik, İstanbul merkezli şirketimiz; Savunma Sanayii Başkanlığı, Cube Incubation ve Abramak gibi güçlü paydaşlarla çalışmaktadır.</p>
+      </div>
+    </div>
+  </div>
+
 
   <script type="module" src="js/app.js"></script>
 
