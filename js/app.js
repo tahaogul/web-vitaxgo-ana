@@ -2,13 +2,11 @@ import { initNavbar } from './modules/navbar.js';
 import { initAnimations } from './modules/animations.js';
 import { initSmoothScroll } from './modules/smooth-scroll.js';
 import { initModeSwitcher } from './modules/mode-switcher.js';
-import { initThemeSwitcher } from './modules/theme-switcher.js';
 import { initDashboardCarousel } from './modules/dashboard-carousel.js';
 import { initModals } from './modules/modal.js';
 import { $$ } from './utils/dom-helpers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initThemeSwitcher();
   initNavbar();
   initAnimations();
   initSmoothScroll();
